@@ -1,7 +1,8 @@
-import { Heart, Mail, Phone, MapPin, Coffee, Music, Camera, Book, Star, Award, Calendar, User } from "lucide-react"
+import { Heart, Mail, Phone, MapPin, Coffee, Music, Camera, Book, Star, Award, Calendar, User, Gamepad2, Plane } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+
 
 export default function CVNovio() {
   const habilidades = [
@@ -16,21 +17,23 @@ export default function CVNovio() {
   ]
 
   const hobbies = [
-    { icon: <Coffee className="w-4 h-4" />, nombre: "Café de especialidad" },
+    { icon: <Gamepad2 className="w-4 h-4" />, nombre: "Videojuegos" },
+    { icon: <Plane className="w-4 h-4" />, nombre: "Viajes" },
     { icon: <Music className="w-4 h-4" />, nombre: "Música indie" },
     { icon: <Camera className="w-4 h-4" />, nombre: "Fotografía" },
     { icon: <Book className="w-4 h-4" />, nombre: "Lectura" },
   ]
+  
 
   const experiencia = [
     {
-      periodo: "2020 - 2023",
+      periodo: "2021 - 2023",
       titulo: "Novio Comprometido",
       descripcion:
         "Relación seria con excelentes referencias. Especializado en comunicación efectiva y resolución de conflictos.",
     },
     {
-      periodo: "2018 - 2020",
+      periodo: "1998 - 2021",
       titulo: "Soltero Profesional",
       descripcion:
         "Período de crecimiento personal y autodescubrimiento. Desarrollé habilidades culinarias y de cuidado personal.",
@@ -43,11 +46,11 @@ export default function CVNovio() {
         {/* Header */}
         <div className="text-center space-y-4">
           <div className="w-32 h-32 mx-auto bg-gradient-to-br from-rose-400 to-pink-500 rounded-full flex items-center justify-center text-white text-4xl font-bold">
-            JD
+            <img src="/yo.jpeg" alt="Víctor" className="w-full h-full object-cover rounded-full" />
           </div>
           <div>
-            <h1 className="text-4xl font-bold text-gray-800 mb-2">Juan Pérez</h1>
-            <p className="text-xl text-gray-600 mb-4">Novio Disponible • Especialista en Relaciones</p>
+            <h1 className="text-4xl font-bold text-gray-800 mb-2">Víctor</h1>
+            <p className="text-xl text-gray-600 mb-4">Soltero pero no entero</p>
             <div className="flex items-center justify-center gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-1">
                 <MapPin className="w-4 h-4" />
@@ -55,7 +58,7 @@ export default function CVNovio() {
               </div>
               <div className="flex items-center gap-1">
                 <Calendar className="w-4 h-4" />
-                <span>28 años</span>
+                <span>27 años</span>
               </div>
               <div className="flex items-center gap-1">
                 <User className="w-4 h-4" />
@@ -162,7 +165,7 @@ export default function CVNovio() {
                   <li>• Comunicación honesta y abierta</li>
                   <li>• Sentido del humor</li>
                   <li>• Ambición y metas propias</li>
-                  <li>• Amor por las aventuras pequeñas</li>
+                  <li>• Amor por las aventuras</li>
                 </ul>
               </div>
               <div>
@@ -187,15 +190,13 @@ export default function CVNovio() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <Button className="bg-rose-500 hover:bg-rose-600 text-white">
-                <Mail className="w-4 h-4 mr-2" />
-                Enviar mensaje
-              </Button>
-              <Button variant="outline" className="border-rose-300 text-rose-600 hover:bg-rose-50">
-                <Phone className="w-4 h-4 mr-2" />
-                Programar cita
-              </Button>
+            <div className="flex flex-col items-center justify-center">
+              <a href="https://twitter.com/messages/compose?recipient_id=4827061193" target="_blank" rel="noopener noreferrer">
+                <Button className="bg-rose-500 hover:bg-rose-600 text-white">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Enviar mensaje
+                </Button>
+              </a>
             </div>
             <p className="text-center text-sm text-gray-500 mt-4">
               Respondo en menos de 24 horas • Primera cita: café y conversación
