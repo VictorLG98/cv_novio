@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 export default function CVNovio() {
   const habilidades = [
     "Escuchar activamente",
-    "Cocinar pasta decente",
+    "Cocinar riquísimo",
     "Dar abrazos de calidad",
     "Recordar fechas importantes",
     "Hacer reír en momentos difíciles",
@@ -19,7 +19,7 @@ export default function CVNovio() {
   const hobbies = [
     { icon: <Gamepad2 className="w-4 h-4" />, nombre: "Videojuegos" },
     { icon: <Plane className="w-4 h-4" />, nombre: "Viajes" },
-    { icon: <Music className="w-4 h-4" />, nombre: "Música indie" },
+    { icon: <Music className="w-4 h-4" />, nombre: "Música" },
     { icon: <Camera className="w-4 h-4" />, nombre: "Fotografía" },
     { icon: <Book className="w-4 h-4" />, nombre: "Lectura" },
   ]
@@ -199,14 +199,14 @@ export default function CVNovio() {
               </a>
             </div>
             <p className="text-center text-sm text-gray-500 mt-4">
-              Respondo en menos de 24 horas • Primera cita: café y conversación
+              Respondo en menos de 24 horas • Primera cita: café, conversación y lo que surja
             </p>
           </CardContent>
         </Card>
 
         {/* Footer */}
         <div className="text-center text-sm text-gray-400 py-4">
-          <p>CV Novio v2.0 • Actualizado en Enero 2025 • Referencias disponibles bajo petición</p>
+          <p>Actualizado en Septiembre de 2025 - Todos los derechos reservados</p>
         </div>
       </div>
     </div>
