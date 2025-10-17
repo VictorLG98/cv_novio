@@ -1,10 +1,53 @@
+"use client"
+
 import { Heart, Mail, MapPin, Music, Camera, Book, Star, Award, Calendar, User, Gamepad2, Plane } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { useState } from "react"
 
 
 export default function CVNovio() {
+  const [password, setPassword] = useState("")
+  const [isAuthorized, setIsAuthorized] = useState(false)
+
+  if (!isAuthorized) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-50 flex items-center justify-center p-4">
+        <Card className="w-full max-w-sm">
+          <CardHeader>
+            <CardTitle className="text-center">Acceso</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form
+              className="space-y-4"
+              onSubmit={(e) => {
+                e.preventDefault()
+                if (password === "pablito9000") {
+                  setIsAuthorized(true)
+                }
+              }}
+            >
+              <div>
+                <label className="block text-sm mb-1">Contraseña</label>
+                <Input
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="Introduce la contraseña"
+                />
+              </div>
+              <Button type="submit" className="w-full bg-emerald-600 hover:bg-emerald-700 text-white">Entrar</Button>
+              {password && password !== "pablito9000" && (
+                <p className="text-sm text-red-600">Contraseña incorrecta</p>
+              )}
+            </form>
+          </CardContent>
+        </Card>
+      </div>
+    )
+  }
   const habilidades = [
     "Escuchar activamente",
     "Cocinar riquísimo",
